@@ -1,0 +1,65 @@
+<!ELEMENT ecommerce (products, categories, reviews, ratings, customers, orders?)>
+<!ELEMENT products (product+)>
+<!ELEMENT product (id, name, description, price, image, category+, brand, availability, rating, features, attribute*)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT image (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT categories (category+)>
+<!ELEMENT brand (#PCDATA)>
+<!ELEMENT availability (#PCDATA)>
+<!ELEMENT rating (#PCDATA)>
+<!ELEMENT features (feature+)>
+<!ELEMENT feature (#PCDATA)>
+<!ELEMENT attribute (#PCDATA)>
+<!ELEMENT reviews (review+)>
+<!ELEMENT review (id, product_id, customer_id, rating, review_text, date, attribute*)>
+<!ELEMENT customer_id (#PCDATA)>
+<!ELEMENT product_id (#PCDATA)>
+<!ELEMENT review_text (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT ratings (rating+)>
+<!ELEMENT customers (customer+)>
+<!ELEMENT customer (id, name, email, address, phone, billing_address?, shipping_address?, wishlist?, attribute*)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT billing_address (address+)>
+<!ELEMENT shipping_address (address+)>
+<!ELEMENT wishlist (product*)>
+<!ELEMENT orders (order+)>
+<!ELEMENT order (id, customer_id, product+, order_date, status, payment_method, shipping_method, shipping_address, billing_address, attribute*)>
+<!ELEMENT payment_method (#PCDATA)>
+<!ELEMENT shipping_method (#PCDATA)>
+<!ELEMENT attribute (#PCDATA)>
+
+<!ATTLIST product weight CDATA #IMPLIED>
+<!ATTLIST product height CDATA #IMPLIED>
+<!ATTLIST product width CDATA #IMPLIED>
+<!ATTLIST product length CDATA #IMPLIED>
+<!ATTLIST product color CDATA #IMPLIED>
+<!ATTLIST product size CDATA #IMPLIED>
+<!ATTLIST product material CDATA #IMPLIED>
+<!ATTLIST product manufacturer CDATA #IMPLIED>
+<!ATTLIST product warranty CDATA #IMPLIED>
+<!ATTLIST product condition CDATA #IMPLIED>
+
+<!ATTLIST review helpful_votes CDATA #IMPLIED>
+<!ATTLIST review total_votes CDATA #IMPLIED>
+<!ATTLIST review verified_buyer (true|false) #IMPLIED>
+<!ATTLIST review recommended_product CDATA #IMPLIED>
+
+<!ATTLIST customer date_registered CDATA #IMPLIED>
+<!ATTLIST customer loyalty_level CDATA #IMPLIED>
+<!ATTLIST customer referral_code CDATA #IMPLIED>
+<!ATTLIST customer birthday CDATA #IMPLIED>
+<!ATTLIST customer newsletter_optin (true|false) #IMPLIED>
+
+<!ATTLIST order total_price CDATA #IMPLIED>
+<!ATTLIST order payment_status CDATA #IMPLIED>
+<!ATTLIST order shipping_status CDATA #IMPLIED>
+<!ATTLIST order tax_rate CDATA #IMPLIED>
+<!ATTLIST order discount CDATA #IMPLIED>
+<!ATTLIST order coupon_code CDATA #IMPLIED>
