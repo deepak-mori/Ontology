@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ecommerce SYSTEM "ecommerce.dtd">
+
+<ecommerce>
+  <products>
+
+    <product>
+      <id>1</id>
+      <name>T-shirts</name>
+      <description>Men and Women t-shirts</description>
+      <price>39</price>
+      <image>tshirt.jpg</image>
+      <category>Mens</category>
+      <category>Womens</category>
+      <brand>Nike</brand>
+      <availability>In Stock</availability>
+      <rating>4.5</rating>
+      <features>
+        <feature>Type - Cotton</feature>
+        <feature>Color - Blue</feature>
+        <feature>Round-neck</feature>
+      </features>
+    </product>
+
+    <product>
+      <id>2</id>
+      <name>Pants</name>
+      <description>Men and Women Pants</description>
+      <price>129.99</price>
+      <image>pants.jpg</image>
+      <category>Mens</category>
+      <brand>Killer</brand>
+      <availability>In Stock</availability>
+      <rating>3.8</rating>
+      <features>
+        <feature>Material - Fabric</feature>
+        <feature>Color - Blue</feature>
+        <feature>Slim fit</feature>
+      </features>
+    </product>
+
+    <product>
+      <id>3</id>
+      <name>Shoes</name>
+      <description>A classic low-top sneaker from Nike with a leather and textile upper.</description>
+      <price>99.99</price>
+      <image>shoe.jpg</image>
+      <category>Casual Shoes</category>
+      <category>Athletic Shoes</category>
+      <brand>Nike</brand>
+      <availability>In Stock</availability>
+      <rating>4.5</rating>
+      <features>
+        <feature>Leather and textile upper</feature>
+        <feature>Perforations for breathability</feature>
+        <feature>Non-marking rubber outsole</feature>
+      </features>
+    </product>
+
+  </products>
+
+  <categories>
+    <category>Men</category>
+    <category>Women</category>
+  </categories>
+
+  <reviews>
+
+    <review helpful_votes="10" total_votes="12" verified_buyer="true" recommended_product="T-shirts">
+      <id>1</id>
+      <product_id>1</product_id>
+      <customer_id>1</customer_id>
+      <rating>5</rating>
+      <review_text>Great product!</review_text>
+      <date>2022-02-01</date>
+    </review>
+
+    <review helpful_votes="5" total_votes="6" verified_buyer="true" recommended_product="Pants">
+      <id>2</id>
+      <product_id>2</product_id>
+      <customer_id>2</customer_id>
+      <rating>4</rating>
+      <review_text>Good product, but could be better</review_text>
+      <date>2022-02-03</date>
+    </review>
+
+    <review helpful_votes="8" total_votes="16" verified_buyer="true" recommended_product="Shoes">
+      <id>3</id>
+      <product_id>3</product_id>
+      <customer_id>3</customer_id>
+      <rating>5</rating>
+      <review_text>Great product for the price range!</review_text>
+      <date>2022-02-03</date>
+    </review>
+
+  </reviews>
+
+  <ratings>
+
+    <rating>4.5</rating>
+    <rating>3.8</rating>
+    <rating>5.0</rating>
+
+  </ratings>
+
+  <customers>
+
+    <customer>
+      <id>1</id>
+      <name>Tarun Chandel</name>
+      <email>tarun99@gmail.com</email>
+      <address>Room no. 389, Mandakini Hostel, IIT Madras, Chennai</address>
+      <phone>9658425456</phone>
+      <billing_address>
+        <address>Chuna Bhatti, Bhopal, Madhya Pradesh</address>
+        <address>Mandakini Hostel, IIT Madras</address>
+      </billing_address>
+      <shipping_address>
+        <address>Nandini Restaurant, Vellachery, Chennai</address>
+      </shipping_address>
+      <attribute>Thank you and visit again!</attribute>
+    </customer>
+
+    <customer>
+      <id>2</id>
+      <name>Kuldeep Yadav</name>
+      <email>Kuldeep97@gmail.com</email>
+      <address>Room no. 349, Mandakini Hostel, IIT Madras, Chennai</address>
+      <phone>9685425836</phone>
+      <billing_address>
+      <address>Patel Colony, Madhogang, UP</address>
+      </billing_address>
+      <shipping_address>
+      <address>Vellachery, Chennai</address>
+      </shipping_address>
+      <attribute>Thank you have a great day and visit again!</attribute>
+    </customer>
+
+    <customer>
+      <id>3</id>
+      <name>Deepak Mori</name>
+      <email>deepak98@gmail.com</email>
+      <address>Room no. 346, Mandakini Hostel, IIT Madras, Chennai</address>
+      <phone>9685425836</phone>
+      <billing_address>
+      <address>Killa Colony, Bagh, MP</address>
+      </billing_address>
+      <shipping_address>
+      <address>Vellachery, Chennai</address>
+      </shipping_address>
+      <attribute>Thank you have a great day and visit again!</attribute>
+    </customer>
+
+  </customers>
+
+</ecommerce>

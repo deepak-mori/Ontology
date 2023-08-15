@@ -1,0 +1,733 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/rogstrix/ontologies/2023/3/ecommerce1"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/rogstrix/ontologies/2023/3/ecommerce1">
+    <Prefix name="" IRI="http://www.semanticweb.org/rogstrix/ontologies/2023/3/ecommerce1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This owl ontology represent a ecommerce store which has customers, products and reviews for products.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#billing_address"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#customer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#customers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ecommerce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#product"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#products"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#review"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#reviews"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#shipping_address"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#containCustomers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#containProducts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#containReviews"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#containsCustomer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#containsFeature"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#containsProduct"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#containsReview"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasReviews"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#address"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#availibility"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#brand"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#customer_id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#email"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#feature"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#phone"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#price"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#product_id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#rating"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#review_text"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ankit_Gupta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chetan_Patidar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Deepak_Mori"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kuldeep_Yadav"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pants"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Shoes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tarun_Chandel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tshirts"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#review1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#review2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#review3"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#customers"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#containsCustomer"/>
+            <Class IRI="#customer"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#products"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#containsProduct"/>
+            <Class IRI="#product"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#reviews"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#containsReview"/>
+            <Class IRI="#review"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#billing_address"/>
+        <Class IRI="#customer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#customer"/>
+        <Class IRI="#customers"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#customers"/>
+        <Class IRI="#ecommerce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#product"/>
+        <Class IRI="#products"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#products"/>
+        <Class IRI="#ecommerce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#review"/>
+        <Class IRI="#reviews"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#reviews"/>
+        <Class IRI="#ecommerce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#shipping_address"/>
+        <Class IRI="#customer"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#customer"/>
+        <NamedIndividual IRI="#Ankit_Gupta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#customer"/>
+        <NamedIndividual IRI="#Chetan_Patidar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#customer"/>
+        <NamedIndividual IRI="#Deepak_Mori"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#customer"/>
+        <NamedIndividual IRI="#Kuldeep_Yadav"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#product"/>
+        <NamedIndividual IRI="#Pants"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#product"/>
+        <NamedIndividual IRI="#Shoes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#customer"/>
+        <NamedIndividual IRI="#Tarun_Chandel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#product"/>
+        <NamedIndividual IRI="#Tshirts"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#review"/>
+        <NamedIndividual IRI="#review1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#review"/>
+        <NamedIndividual IRI="#review2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#review"/>
+        <NamedIndividual IRI="#review3"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#Ankit_Gupta"/>
+        <Literal>ankit69@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#Ankit_Gupta"/>
+        <Literal>3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Ankit_Gupta"/>
+        <Literal>Ankit Gupta</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#phone"/>
+        <NamedIndividual IRI="#Ankit_Gupta"/>
+        <Literal>8989898989</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#Chetan_Patidar"/>
+        <Literal>chetan89@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#Chetan_Patidar"/>
+        <Literal>4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Chetan_Patidar"/>
+        <Literal>Chetan Patidar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#phone"/>
+        <NamedIndividual IRI="#Chetan_Patidar"/>
+        <Literal>7897897890</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#Deepak_Mori"/>
+        <Literal>deepakmori78@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#Deepak_Mori"/>
+        <Literal>5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Deepak_Mori"/>
+        <Literal>Deepak Mori</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#phone"/>
+        <NamedIndividual IRI="#Deepak_Mori"/>
+        <Literal>9789786543</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#Kuldeep_Yadav"/>
+        <Literal>Kuldeep97@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#Kuldeep_Yadav"/>
+        <Literal>2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Kuldeep_Yadav"/>
+        <Literal>kuldeep yadav</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#phone"/>
+        <NamedIndividual IRI="#Kuldeep_Yadav"/>
+        <Literal>9685425836</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#availibility"/>
+        <NamedIndividual IRI="#Pants"/>
+        <Literal>In Stock</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brand"/>
+        <NamedIndividual IRI="#Pants"/>
+        <Literal>Killer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#description"/>
+        <NamedIndividual IRI="#Pants"/>
+        <Literal>Men and Women Pants</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#Pants"/>
+        <Literal>2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Pants"/>
+        <Literal>Pants</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#Pants"/>
+        <Literal>329</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rating"/>
+        <NamedIndividual IRI="#Pants"/>
+        <Literal>4.1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#availibility"/>
+        <NamedIndividual IRI="#Shoes"/>
+        <Literal>In Stock</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brand"/>
+        <NamedIndividual IRI="#Shoes"/>
+        <Literal>Nike</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#description"/>
+        <NamedIndividual IRI="#Shoes"/>
+        <Literal>A classic low-top sneaker from Nike with a leather and textile upper.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#Shoes"/>
+        <Literal>3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Shoes"/>
+        <Literal>Shoes</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#Shoes"/>
+        <Literal>299.99</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rating"/>
+        <NamedIndividual IRI="#Shoes"/>
+        <Literal>3.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#Tarun_Chandel"/>
+        <Literal>tarun99@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#Tarun_Chandel"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Tarun_Chandel"/>
+        <Literal>Tarun Chandel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#phone"/>
+        <NamedIndividual IRI="#Tarun_Chandel"/>
+        <Literal>9658425456</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#availibility"/>
+        <NamedIndividual IRI="#Tshirts"/>
+        <Literal>In Stock</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#brand"/>
+        <NamedIndividual IRI="#Tshirts"/>
+        <Literal>Nike</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#description"/>
+        <NamedIndividual IRI="#Tshirts"/>
+        <Literal>Men and Women t-shirts</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#Tshirts"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Tshirts"/>
+        <Literal>T-shirts</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#Tshirts"/>
+        <Literal>390</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rating"/>
+        <NamedIndividual IRI="#Tshirts"/>
+        <Literal>4.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#customer_id"/>
+        <NamedIndividual IRI="#review1"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date"/>
+        <NamedIndividual IRI="#review1"/>
+        <Literal>2022-02-01</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#review1"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#product_id"/>
+        <NamedIndividual IRI="#review1"/>
+        <Literal>1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rating"/>
+        <NamedIndividual IRI="#review1"/>
+        <Literal>4.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#review_text"/>
+        <NamedIndividual IRI="#review1"/>
+        <Literal>Great product!</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#customer_id"/>
+        <NamedIndividual IRI="#review2"/>
+        <Literal>2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date"/>
+        <NamedIndividual IRI="#review2"/>
+        <Literal>2022-02-03</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#review2"/>
+        <Literal>2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#product_id"/>
+        <NamedIndividual IRI="#review2"/>
+        <Literal>2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rating"/>
+        <NamedIndividual IRI="#review2"/>
+        <Literal>4.1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#review_text"/>
+        <NamedIndividual IRI="#review2"/>
+        <Literal>Good product, but could be better</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#customer_id"/>
+        <NamedIndividual IRI="#review3"/>
+        <Literal>3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#date"/>
+        <NamedIndividual IRI="#review3"/>
+        <Literal>2022-02-03</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#id"/>
+        <NamedIndividual IRI="#review3"/>
+        <Literal>3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#product_id"/>
+        <NamedIndividual IRI="#review3"/>
+        <Literal>3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#rating"/>
+        <NamedIndividual IRI="#review3"/>
+        <Literal>3.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#review_text"/>
+        <NamedIndividual IRI="#review3"/>
+        <Literal>Great product for the price range!</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#containCustomers"/>
+        <Class IRI="#ecommerce"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#containProducts"/>
+        <Class IRI="#ecommerce"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#containReviews"/>
+        <Class IRI="#ecommerce"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#containsCustomer"/>
+        <Class IRI="#customers"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#containsFeature"/>
+        <Class IRI="#product"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#containsProduct"/>
+        <Class IRI="#products"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#containsReview"/>
+        <Class IRI="#reviews"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasReviews"/>
+        <Class IRI="#product"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#containCustomers"/>
+        <Class IRI="#customers"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#containProducts"/>
+        <Class IRI="#products"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#containReviews"/>
+        <Class IRI="#reviews"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#containsCustomer"/>
+        <Class IRI="#customer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#containsProduct"/>
+        <Class IRI="#product"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#containsReview"/>
+        <Class IRI="#review"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasReviews"/>
+        <Class IRI="#review"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#address"/>
+        <Class IRI="#billing_address"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#address"/>
+        <Class IRI="#shipping_address"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#availibility"/>
+        <Class IRI="#product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#brand"/>
+        <Class IRI="#product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#customer_id"/>
+        <Class IRI="#review"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#date"/>
+        <Class IRI="#review"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#description"/>
+        <Class IRI="#product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#email"/>
+        <Class IRI="#customer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id"/>
+        <Class IRI="#customer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id"/>
+        <Class IRI="#product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#id"/>
+        <Class IRI="#review"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#customer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#phone"/>
+        <Class IRI="#customer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#product_id"/>
+        <Class IRI="#review"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#rating"/>
+        <Class IRI="#product"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#rating"/>
+        <Class IRI="#review"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#review_text"/>
+        <Class IRI="#review"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#address"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#availibility"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#brand"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#customer_id"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#date"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#description"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#email"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#feature"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#id"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#phone"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#product_id"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#rating"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#review_text"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
